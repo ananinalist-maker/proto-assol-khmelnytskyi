@@ -60,20 +60,22 @@ nav.top a:hover{opacity:1;color:var(--lamp)}
 #drawer.open{transform:none}
 #drawer a{font:400 32px var(--serif);text-decoration:none}
 #drawerClose{position:absolute;top:18px;right:18px;background:none;border:0;color:inherit;font-size:34px;cursor:pointer}
-.hero{position:relative;height:100vh;height:100svh;min-height:560px;color:#fff;overflow:hidden;background:#1b1612 center/cover no-repeat}
+.hero{position:relative;height:100vh;height:100svh;min-height:600px;color:#fff;overflow:hidden;background:#1a2230 center/cover no-repeat}
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,22,26,.55) 0%,rgba(12,22,26,0) 20%,rgba(12,22,26,.12) 40%,rgba(12,22,26,.8) 78%,rgba(12,22,26,.92) 100%),linear-gradient(90deg,rgba(12,22,26,.5) 0%,rgba(12,22,26,0) 60%)}
-.hero-in{position:absolute;z-index:2;left:0;right:0;bottom:clamp(120px,17vh,170px)}
-.hero .over{color:var(--lamp)}
-.hero h1{font-size:clamp(38px,5.4vw,76px);margin:14px 0 18px;opacity:0;transform:translateY(18px);transition:opacity 1.2s .2s,transform 1.2s .2s}
-.hero.on h1{opacity:1;transform:none}
-.rot{color:var(--lamp);display:block;min-height:1.12em;transition:opacity .5s,transform .5s}
-.rot.out{opacity:0;transform:translateY(-10px)}
-.hero p.sub{font-size:clamp(16px,1.5vw,19px);max-width:560px;opacity:.92}
-.hero .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:26px}
-.proof{display:flex;gap:34px;margin-top:30px;font-size:14px;opacity:.92;flex-wrap:wrap}
-.proof b{display:block;font:400 28px/1 var(--serif);color:var(--lamp);margin-bottom:4px}
-.vnote{position:absolute;z-index:2;right:20px;bottom:96px;max-width:300px;font-size:11.5px;line-height:1.4;opacity:.62;text-align:right}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,34,.45) 0%,rgba(10,20,34,0) 18%,rgba(10,20,34,0) 45%,rgba(10,18,24,.7) 80%,rgba(10,18,24,.85) 100%),radial-gradient(ellipse 60% 70% at 22% 62%,rgba(10,18,24,.45),rgba(10,18,24,0) 70%)}
+.hero-in{position:absolute;z-index:2;left:0;right:0;bottom:clamp(150px,21vh,210px)}
+.hero .sail{width:46px;height:46px;margin-bottom:10px;opacity:0;transform:translateY(12px);transition:1s .1s}
+.hero .over{color:#F2C98A;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.hero h1{font-size:clamp(64px,9vw,132px);line-height:.95;margin:10px 0 18px;letter-spacing:.01em;text-shadow:0 2px 30px rgba(0,0,0,.35);opacity:0;transform:translateY(18px);transition:opacity 1.2s .25s,transform 1.2s .25s}
+.h1s{display:block;font-size:clamp(22px,2.3vw,32px);line-height:1.25;margin-top:14px;color:#F6E7D2;letter-spacing:0}
+.hero.on h1,.hero.on .sail{opacity:1;transform:none}
+.hero p.sub{font-size:clamp(16px,1.4vw,18.5px);max-width:520px;opacity:.94;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.hero .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:26px}
+.hero .row .btn.ghost{background:rgba(255,255,255,.08);backdrop-filter:blur(6px);border-color:rgba(255,255,255,.55)}
+.proofbar{position:absolute;z-index:2;left:0;right:0;bottom:86px;font-size:14px;color:rgba(255,255,255,.88)}
+.proofbar .wrap{display:flex;gap:30px;align-items:center;border-top:1px solid rgba(255,255,255,.22);padding-top:16px}
+.proofbar b{font:400 19px var(--serif);color:#F2C98A;margin-right:4px}
+.proofbar .vnote{margin-left:auto;max-width:330px;font-size:11.5px;line-height:1.4;opacity:.65;text-align:right}
 .qwrap{position:relative;z-index:5;margin-top:-62px}
 #qform{display:grid;grid-template-columns:1fr 1fr .8fr .8fr auto;background:var(--paper);border-radius:8px;box-shadow:0 20px 50px rgba(14,30,34,.25);overflow:hidden}
 #qform label{display:flex;flex-direction:column;padding:14px 20px;border-right:1px solid var(--line);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
@@ -210,13 +212,15 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
 @media (max-width:600px){
  .wrap{width:calc(100% - 32px)}
  #head .wrap{height:64px}.logo b{font-size:23px}
- .hero-in{bottom:106px}
- .hero h1{margin:10px 0 12px}
- .hero p.sub{font-size:15.5px}
- .hero:after{background:linear-gradient(180deg,rgba(12,22,26,.5) 0%,rgba(12,22,26,.1) 18%,rgba(12,22,26,.5) 42%,rgba(12,22,26,.9) 70%,rgba(12,22,26,.95) 100%)}
- .proof{gap:14px;margin-top:22px;flex-wrap:nowrap;font-size:12px;line-height:1.35}.proof b{font-size:19px}
- .hero .row .btn{flex:1}
- .vnote{left:16px;right:16px;bottom:70px;text-align:left;max-width:none;font-size:10px;line-height:1.3}
+ .hero-in{bottom:128px}
+ .hero:after{background:linear-gradient(180deg,rgba(10,20,34,.45) 0%,rgba(10,20,34,0) 16%,rgba(10,18,24,.15) 40%,rgba(10,18,24,.8) 68%,rgba(10,18,24,.9) 100%)}
+ .hero .sail{width:38px;height:38px}
+ .hero h1{font-size:68px;margin:6px 0 12px}
+ .h1s{font-size:21px;margin-top:10px}
+ .hero p.sub{font-size:15px}
+ .hero .row{margin-top:18px;gap:8px}.hero .row .btn{flex:1;padding:0 14px;min-height:48px;font-size:14px}
+ .proofbar{bottom:72px}.proofbar .wrap{border:0;padding-top:0}.proofbar span:not(.vnote){display:none}
+ .proofbar .vnote{margin:0;max-width:none;text-align:left;font-size:10px;flex-basis:100%}
  .qwrap{margin-top:0;background:var(--paper)}
  #qform{box-shadow:none;border-radius:0}
  .mstrip{display:flex;position:absolute;z-index:3;left:16px;right:16px;bottom:14px;background:rgba(251,247,241,.95);color:var(--ink);border-radius:99px;padding:9px 9px 9px 18px;align-items:center;justify-content:space-between;font-size:14px;text-decoration:none}
@@ -245,13 +249,13 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
 <section class="hero" aria-label="Перший екран">
  <video id="heroVideo" muted autoplay loop playsinline preload="auto"></video>
  <div class="hero-in"><div class="wrap">
+  <svg class="sail" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 4c6 4.5 8 10.5 7.4 19H18z" fill="#C2412F"/><path d="M16.8 7.5c-4 4-5.6 9.2-5 15.5h5z" fill="#E36A52"/><path d="M17.4 3v21" stroke="#fff" stroke-width="1.2"/><path d="M5 26.5c4 2.6 22 2.6 26 0" stroke="#fff" stroke-width="1.6"/></svg>
   <p class="over">Хмельницький · вул. Бандери, 82/5</p>
-  <h1>Міні-готель у Хмельницькому <span class="rot" id="rot">з тихим двором</span></h1>
-  <p class="sub">Теплі номери на першому поверсі, тихий двір і велика парковка. Бронюйте напряму, без комісії посередників.</p>
-  <div class="row"><a class="btn" href="#bron">Обрати дати й написати</a></div>
-  <div class="proof"><div><b>1 поверх</b>без сходів із валізами</div><div><b>Двір</b>лавки й мангали</div><div><b>Парковка</b>на території</div></div>
+  <h1>«Ассоль»<span class="h1s">міні-готель з тихим двором<br>у Хмельницькому</span></h1>
+  <p class="sub">Окремі номери на першому поверсі, вечори під ліхтарями й велика парковка. Пишіть напряму, без комісії посередників.</p>
+  <div class="row"><a class="btn" href="#bron">Обрати дати</a><a class="btn ghost" href="viber://chat?number=%2B380679242153">Написати у Viber</a></div>
  </div></div>
- <p class="vnote">Відео зібране для прототипу з фото з Google-картки готелю. У робочій версії тут буде ваше відео.</p>
+ <div class="proofbar"><div class="wrap"><span><b>1 поверх</b> без сходів</span><span><b>Двір</b> лавки й мангали</span><span><b>Парковка</b> на території</span><span class="vnote">Настроєве відео зібране для прототипу з фото вашого двору. У робочій версії тут буде ваше відео.</span></div></div>
  <a class="mstrip" href="#qform"><span>Дати й гості</span><b>Перевірити</b></a>
 </section>
 <div class="qwrap"><div class="wrap">
@@ -430,8 +434,6 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
   var src=document.createElement('source'); src.src=base+'.mp4'; src.type='video/mp4'; v.appendChild(src); v.load();
   var on=function(){hero.classList.add('on')}; v.addEventListener('playing',on); setTimeout(on,2500);
   var p=v.play(); if(p&&p.catch) p.catch(function(){});
-  var words=['з тихим двором','з парковкою','з теплими номерами'], wi=0, rot=$('#rot');
-  setInterval(function(){rot.classList.add('out');setTimeout(function(){wi=(wi+1)%words.length;rot.textContent=words[wi];rot.classList.remove('out')},500)},3200);
   var head=$('#head'), bar=$('#bar');
   var onS=function(){var y=scrollY; head.classList.toggle('solid',y>60); bar.classList.toggle('show',y>innerHeight*.9)};
   addEventListener('scroll',onS,{passive:true}); onS();
