@@ -109,7 +109,7 @@ section{padding:clamp(80px,10vw,130px) 0}
 .sl{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:4/4.4;position:relative}
 .sl img{width:100%;height:100%;object-fit:cover}
 .sl figcaption{position:absolute;left:14px;bottom:14px;background:rgba(14,30,34,.7);color:#fff;font-size:13px;padding:5px 12px;border-radius:99px}
-.thumbs{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:8px}
+.thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:8px}
 .thumbs button{border:0;padding:0;background:none;cursor:pointer;aspect-ratio:1;border-radius:4px;overflow:hidden;opacity:.55;transition:opacity .2s}
 .thumbs button.act,.thumbs button:hover{opacity:1}
 .thumbs img{width:100%;height:100%;object-fit:cover}
@@ -136,6 +136,8 @@ blockquote cite{display:block;font:500 12.5px var(--sans);font-style:normal;colo
 #dvir cite{color:rgba(255,255,255,.7)}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:-60px;position:relative;z-index:2}
 .duo img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:0 20px 40px rgba(14,30,34,.2)}
+.zgrid{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px;align-items:stretch}.zgrid img{width:100%;height:100%;object-fit:cover;border-radius:8px;box-shadow:0 14px 30px rgba(14,30,34,.16)}
+#zal{padding:110px 0 20px}
 #mistse{padding-top:120px}
 .mapgrid{display:grid;grid-template-columns:1fr 1.3fr;gap:46px;align-items:center}
 .dist{list-style:none;margin:24px 0}
@@ -233,7 +235,7 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
  .mstrip{display:flex;position:absolute;z-index:3;left:16px;right:16px;bottom:14px;background:rgba(251,247,241,.95);color:var(--ink);border-radius:99px;padding:9px 9px 9px 18px;align-items:center;justify-content:space-between;font-size:14px;text-decoration:none}
  .mstrip b{background:var(--scarlet);color:#fff;border-radius:99px;padding:8px 14px;font-weight:600;font-size:13.5px}
  .amen{columns:1}
- .duo{margin-top:-40px;gap:10px}
+ .duo{margin-top:-40px;gap:10px}.zgrid{grid-template-columns:1fr 1fr}.zgrid img:nth-child(2){grid-column:1/-1;order:-1;aspect-ratio:4/3}#zal{padding-top:80px}
  #months{grid-template-columns:1fr}#months .mon:nth-child(2){display:none}
  .faq summary{font-size:20px}
  h2{font-size:34px}
@@ -247,11 +249,11 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
    <svg viewBox="0 0 36 36" fill="none"><path d="M18 4c6 4.5 8 10.5 7.4 19H18z" fill="#C2412F"/><path d="M16.8 7.5c-4 4-5.6 9.2-5 15.5h5z" fill="#E36A52"/><path d="M17.4 3v21" stroke="currentColor" stroke-width="1.2"/><path d="M5 26.5c4 2.6 22 2.6 26 0" stroke="currentColor" stroke-width="1.6"/><path d="M8 31c3 1 17 1 20 0" stroke="#E9B266" stroke-width="1.2"/></svg>
    <span><b>Ассоль</b><small>міні-готель · Хмельницький</small></span>
   </a>
-  <nav class="top"><a href="#nomery">Номери</a><a href="#dvir">Двір</a><a href="#mistse">Як&nbsp;знайти</a><a href="#vidguky">Відгуки</a><a href="#bron">Бронювання</a><a href="#faq">Питання</a></nav>
+  <nav class="top"><a href="#nomery">Номери</a><a href="#dvir">Двір</a><a href="#zal">Свята</a><a href="#mistse">Як&nbsp;знайти</a><a href="#vidguky">Відгуки</a><a href="#bron">Бронювання</a><a href="#faq">Питання</a></nav>
   <div class="hcta"><a class="btn" href="#bron">Обрати дати</a><button id="burger" aria-label="Меню"><svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button></div>
  </div>
 </header>
-<div id="drawer"><button id="drawerClose" aria-label="Закрити">×</button><a href="#nomery">Номери</a><a href="#dvir">Двір</a><a href="#mistse">Як&nbsp;знайти</a><a href="#vidguky">Відгуки</a><a href="#bron">Бронювання</a><a href="#faq">Питання</a></div>
+<div id="drawer"><button id="drawerClose" aria-label="Закрити">×</button><a href="#nomery">Номери</a><a href="#dvir">Двір</a><a href="#zal">Свята</a><a href="#mistse">Як&nbsp;знайти</a><a href="#vidguky">Відгуки</a><a href="#bron">Бронювання</a><a href="#faq">Питання</a></div>
 <main id="top">
 <section class="hero" aria-label="Перший екран">
  <video id="heroVideo" muted autoplay loop playsinline preload="auto"></video>
@@ -279,7 +281,7 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
  <div class="wrap">
   <ul class="fakty">
    <li><b>Двомісні й&nbsp;тримісні номери</b><span>На&nbsp;двох або на&nbsp;трьох гостей</span></li>
-   <li><b>Столи до&nbsp;100 гостей</b><span>Для свята чи&nbsp;великої компанії</span></li>
+   <li><b>Столи до&nbsp;100&nbsp;гостей</b><span>Для свята чи&nbsp;великої компанії</span></li>
    <li><b>Світло є&nbsp;постійно</b><span>Працюють сонячні панелі</span></li>
    <li><b>Оплата як&nbsp;зручно</b><span>Готівка, розрахунковий рахунок, термінал. Надаємо документи</span></li>
   </ul>
@@ -315,15 +317,14 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
    <div class="media rv">
     <div class="slides" tabindex="0" aria-label="Фото номерів">
      <figure class="sl"><img src="img/o-room-wide-s.webp" srcset="img/o-room-wide-s.webp 700w, img/o-room-wide.webp 1400w" sizes="(max-width:900px) 100vw, 56vw" alt="Світлий номер із виходом у двір, двоспальне і односпальне ліжко" width="700" height="933"><figcaption>Світлий номер, вихід у&nbsp;двір</figcaption></figure>
-     <figure class="sl"><img src="img/o-room-curtain-s.webp" srcset="img/o-room-curtain-s.webp 700w, img/o-room-curtain.webp 1400w" sizes="(max-width:900px) 100vw, 56vw" alt="Номер із двома ліжками й щільними шторами" loading="lazy" width="700" height="933"><figcaption>Двомісний і&nbsp;тримісний варіант, щільні штори</figcaption></figure>
      <figure class="sl"><img src="img/o-room-tv-s.webp" srcset="img/o-room-tv-s.webp 700w, img/o-room-tv.webp 1400w" sizes="(max-width:900px) 100vw, 56vw" alt="Номер із телевізором, холодильником, чайником і санвузлом" loading="lazy" width="700" height="933"><figcaption>Телевізор, холодильник, чайник, свій санвузол</figcaption></figure>
      <figure class="sl"><img src="img/o-room-trio-s.webp" srcset="img/o-room-trio-s.webp 700w, img/o-room-trio.webp 1400w" sizes="(max-width:900px) 100vw, 56vw" alt="Тримісний номер: двоспальне і односпальне ліжко, рушники"  loading="lazy" width="700" height="525"><figcaption>Двоспальне й&nbsp;односпальне ліжко, свіжі рушники</figcaption></figure>
      <figure class="sl"><img src="img/door-s.webp" srcset="img/door-s.webp 700w, img/door.webp 1400w" sizes="(max-width:900px) 100vw, 56vw" alt="Відчинені двері номера з виходом у двір" loading="lazy" width="700" height="1244"><figcaption>З&nbsp;номера одразу у&nbsp;двір</figcaption></figure>
      <figure class="sl"><img src="img/front-s.webp" srcset="img/front-s.webp 700w, img/front.webp 1400w" sizes="(max-width:900px) 100vw, 56vw" alt="Одноповерховий будинок міні-готелю Ассоль" loading="lazy" width="700" height="926"><figcaption>Будинок «Ассоль»</figcaption></figure>
      <figure class="sl"><img src="img/parking-s.webp" srcset="img/parking-s.webp 700w, img/parking.webp 1400w" sizes="(max-width:900px) 100vw, 56vw" alt="Парковка на території готелю" loading="lazy" width="700" height="1244"><figcaption>Парковка перед номерами</figcaption></figure>
     </div>
-    <div class="thumbs"><button type="button" aria-label="Фото 1"><img src="img/o-room-wide-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 2"><img src="img/o-room-curtain-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 3"><img src="img/o-room-tv-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 4"><img src="img/o-room-trio-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 5"><img src="img/door-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 6"><img src="img/front-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 7"><img src="img/parking-s.webp" alt="" loading="lazy"></button></div>
-    <span class="count"><i>1</i> / 7</span>
+    <div class="thumbs"><button type="button" aria-label="Фото 1"><img src="img/o-room-wide-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 2"><img src="img/o-room-tv-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 3"><img src="img/o-room-trio-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 4"><img src="img/door-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 5"><img src="img/front-s.webp" alt="" loading="lazy"></button><button type="button" aria-label="Фото 6"><img src="img/parking-s.webp" alt="" loading="lazy"></button></div>
+    <span class="count"><i>1</i> / 6</span>
    </div>
    <div class="rbody rv">
     <h3>Що&nbsp;є&nbsp;в&nbsp;номері</h3>
@@ -350,6 +351,23 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
  </div>
 </section>
 <div class="wrap duo"><img src="img/yard-s.webp" srcset="img/yard-s.webp 700w, img/yard.webp 1400w" sizes="50vw" alt="Двір готелю з лавками, столиком і квітучими кущами" loading="lazy"><img src="img/front2-s.webp" srcset="img/front2-s.webp 700w, img/front2.webp 1400w" sizes="50vw" alt="Вхід до номерів з двору, бруківка" loading="lazy"></div>
+
+<section id="zal">
+ <div class="wrap">
+  <div class="head2 rv">
+   <p class="over">Для свят</p>
+   <svg class="wave" viewBox="0 0 110 14"><path d="M0 7c9-7 18-7 27 0s18 7 28 0 18-7 27 0 19 7 28 0" stroke="#C2412F" stroke-width="1.4" fill="none"/></svg>
+   <h2>Столи до&nbsp;100 гостей</h2>
+   <p class="lead">Збираєте родинне свято чи&nbsp;велику компанію? Місця за&nbsp;столами вистачить на&nbsp;сто людей, а&nbsp;тим, хто приїхав здалеку, є&nbsp;де&nbsp;заночувати.</p>
+  </div>
+  <div class="zgrid rv">
+   <img src="img/o-hall-long-s.webp" srcset="img/o-hall-long-s.webp 700w, img/o-hall-long.webp 1400w" sizes="(max-width:900px) 50vw, 33vw" alt="Довгі дерев'яні столи з лавками, міні-готель Ассоль" loading="lazy" width="700" height="938">
+   <img src="img/o-terrace-a-s.webp" srcset="img/o-terrace-a-s.webp 700w, img/o-terrace-a.webp 1400w" sizes="(max-width:900px) 100vw, 33vw" alt="Дерев'яні столи й лавки під дахом" loading="lazy" width="700" height="450">
+   <img src="img/o-terrace-win-s.webp" srcset="img/o-terrace-win-s.webp 700w, img/o-terrace-win.webp 1400w" sizes="(max-width:900px) 50vw, 33vw" alt="Стіл з лавками біля відкритого прорізу" loading="lazy" width="700" height="938">
+  </div>
+  <div class="cta rv" style="margin-top:22px"><a class="btn" href="#bron">Запитати про свято</a></div>
+ </div>
+</section>
 
 <section id="mistse">
  <div class="wrap mapgrid">
@@ -418,7 +436,7 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
    <details><summary>Які номери є?</summary><p>Двомісні й&nbsp;тримісні номери. У&nbsp;тримісному двоспальне ліжко й&nbsp;окреме односпальне. Який вільний на&nbsp;ваші дати, скажуть у&nbsp;відповідь на&nbsp;запит.</p></details>
    <details><summary>Як&nbsp;можна оплатити?</summary><p>Готівкою, на&nbsp;розрахунковий рахунок або карткою через термінал. Для тих, кому потрібні документи, надаємо їх.</p></details>
    <details><summary>Що&nbsp;зі&nbsp;світлом, якщо відключають електрику?</summary><p>У&nbsp;готелі працюють сонячні панелі, тож світло є&nbsp;постійно.</p></details>
-   <details><summary>Чи&nbsp;можна провести свято чи&nbsp;зібрати велику компанію?</summary><p>Так, є столи до&nbsp;ста гостей. Умови й&nbsp;ціну на&nbsp;ваш захід назвуть у&nbsp;відповідь.</p></details>
+   <details><summary>Чи&nbsp;можна провести свято чи&nbsp;зібрати велику компанію?</summary><p>Так, є&nbsp;столи до&nbsp;ста гостей. Умови й&nbsp;ціну на&nbsp;ваш захід назвуть у&nbsp;відповідь.</p></details>
    <details><summary>Чи&nbsp;є&nbsp;парковка?</summary><p>Так, на&nbsp;території велика парковка, авто стоїть поруч із&nbsp;номерами.</p></details>
    <details><summary>Що&nbsp;є&nbsp;в&nbsp;номері?</summary><p>Двоспальне ліжко (у&nbsp;тримісних ще&nbsp;й&nbsp;односпальне), рушники, телевізор, холодильник, чайник, мікрохвильова піч, бойлер з&nbsp;гарячою водою і&nbsp;свій санвузол.</p></details>
    <details><summary>Чи&nbsp;можна приготувати вечерю?</summary><p>У&nbsp;номері є&nbsp;мікрохвильова піч, чайник і&nbsp;холодильник, а&nbsp;у&nbsp;дворі біля номерів стоять мангали.</p></details>
