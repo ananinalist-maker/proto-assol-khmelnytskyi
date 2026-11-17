@@ -136,6 +136,8 @@ blockquote cite{display:block;font:500 12.5px var(--sans);font-style:normal;colo
 #dvir cite{color:rgba(255,255,255,.7)}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:-60px;position:relative;z-index:2}
 .duo img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:0 20px 40px rgba(14,30,34,.2)}
+.sgrid{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}.sgrid img{width:100%;height:100%;object-fit:cover;border-radius:8px;box-shadow:0 14px 30px rgba(14,30,34,.16)}
+#stoly{padding:110px 0 10px}
 #mistse{padding-top:120px}
 .mapgrid{display:grid;grid-template-columns:1fr 1.3fr;gap:46px;align-items:center}
 .dist{list-style:none;margin:24px 0}
@@ -233,7 +235,7 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
  .mstrip{display:flex;position:absolute;z-index:3;left:16px;right:16px;bottom:14px;background:rgba(251,247,241,.95);color:var(--ink);border-radius:99px;padding:9px 9px 9px 18px;align-items:center;justify-content:space-between;font-size:14px;text-decoration:none}
  .mstrip b{background:var(--scarlet);color:#fff;border-radius:99px;padding:8px 14px;font-weight:600;font-size:13.5px}
  .amen{columns:1}
- .duo{margin-top:-40px;gap:10px}
+ .duo{margin-top:-40px;gap:10px}.sgrid{grid-template-columns:1fr}.sgrid img{aspect-ratio:4/3}#stoly{padding-top:80px}
  #months{grid-template-columns:1fr}#months .mon:nth-child(2){display:none}
  .faq summary{font-size:20px}
  h2{font-size:34px}
@@ -247,11 +249,11 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
    <svg viewBox="0 0 36 36" fill="none"><path d="M18 4c6 4.5 8 10.5 7.4 19H18z" fill="#C2412F"/><path d="M16.8 7.5c-4 4-5.6 9.2-5 15.5h5z" fill="#E36A52"/><path d="M17.4 3v21" stroke="currentColor" stroke-width="1.2"/><path d="M5 26.5c4 2.6 22 2.6 26 0" stroke="currentColor" stroke-width="1.6"/><path d="M8 31c3 1 17 1 20 0" stroke="#E9B266" stroke-width="1.2"/></svg>
    <span><b>Ассоль</b><small>міні-готель · Хмельницький</small></span>
   </a>
-  <nav class="top"><a href="#nomery">Номери</a><a href="#dvir">Двір</a><a href="#mistse">Як&nbsp;знайти</a><a href="#vidguky">Відгуки</a><a href="#bron">Бронювання</a><a href="#faq">Питання</a></nav>
+  <nav class="top"><a href="#nomery">Номери</a><a href="#dvir">Двір</a><a href="#stoly">Столи</a><a href="#mistse">Як&nbsp;знайти</a><a href="#vidguky">Відгуки</a><a href="#bron">Бронювання</a><a href="#faq">Питання</a></nav>
   <div class="hcta"><a class="btn" href="#bron">Обрати дати</a><button id="burger" aria-label="Меню"><svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button></div>
  </div>
 </header>
-<div id="drawer"><button id="drawerClose" aria-label="Закрити">×</button><a href="#nomery">Номери</a><a href="#dvir">Двір</a><a href="#mistse">Як&nbsp;знайти</a><a href="#vidguky">Відгуки</a><a href="#bron">Бронювання</a><a href="#faq">Питання</a></div>
+<div id="drawer"><button id="drawerClose" aria-label="Закрити">×</button><a href="#nomery">Номери</a><a href="#dvir">Двір</a><a href="#stoly">Столи</a><a href="#mistse">Як&nbsp;знайти</a><a href="#vidguky">Відгуки</a><a href="#bron">Бронювання</a><a href="#faq">Питання</a></div>
 <main id="top">
 <section class="hero" aria-label="Перший екран">
  <video id="heroVideo" muted autoplay loop playsinline preload="auto"></video>
@@ -349,6 +351,21 @@ footer b{font:400 24px var(--serif);color:var(--sand)}
  </div>
 </section>
 <div class="wrap duo"><img src="img/yard-s.webp" srcset="img/yard-s.webp 700w, img/yard.webp 1400w" sizes="50vw" alt="Двір готелю з лавками, столиком і квітучими кущами" loading="lazy"><img src="img/front2-s.webp" srcset="img/front2-s.webp 700w, img/front2.webp 1400w" sizes="50vw" alt="Вхід до номерів з двору, бруківка" loading="lazy"></div>
+
+<section id="stoly">
+ <div class="wrap">
+  <div class="head2 rv">
+   <p class="over">Столи під дахом</p>
+   <svg class="wave" viewBox="0 0 110 14"><path d="M0 7c9-7 18-7 27 0s18 7 28 0 18-7 27 0 19 7 28 0" stroke="#C2412F" stroke-width="1.4" fill="none"/></svg>
+   <h2>Пообідати, повечеряти, посмажити шашлик</h2>
+   <p class="lead">Під дахом стоять дерев’яні столи з&nbsp;лавками, разом до&nbsp;ста місць. Гості обідають тут, вечеряють і&nbsp;смажать шашлики.</p>
+  </div>
+  <div class="sgrid rv">
+   <img src="img/o-tables-wide-s.webp" srcset="img/o-tables-wide-s.webp 700w, img/o-tables-wide.webp 1400w" sizes="(max-width:900px) 100vw, 58vw" alt="Дерев'яні столи з лавками під дахом, міні-готель Ассоль" loading="lazy" width="700" height="391">
+   <img src="img/o-tables-front-s.webp" srcset="img/o-tables-front-s.webp 700w, img/o-tables-front.webp 1400w" sizes="(max-width:900px) 100vw, 42vw" alt="Стіл з двома лавками біля цегляної стіни" loading="lazy" width="700" height="523">
+  </div>
+ </div>
+</section>
 
 <section id="mistse">
  <div class="wrap mapgrid">
